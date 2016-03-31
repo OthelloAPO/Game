@@ -14,19 +14,19 @@ namespace Othello
     class Plateau
     {
         private int[,] damier;
-        const int X = 8;
-        const int Y = 8;
+        private const int _X = 8;
+        private const int _Y = 8;
         private bool joueur; //True si joueur1
 
         public Plateau()
         {
             joueur = true;
-            damier = new int[X, Y]{
+            damier = new int[_X, _Y]{
                 {0,0,0,0,0,0,0,0},
                 {0,0,0,0,0,0,0,0},
                 {0,0,0,0,0,0,0,0},
-                {0,0,0,0,0,0,0,0},
-                {0,0,0,0,0,0,0,0},
+                {0,0,0,1,2,0,0,0},
+                {0,0,0,2,1,0,0,0},
                 {0,0,0,0,0,0,0,0},
                 {0,0,0,0,0,0,0,0},
                 {0,0,0,0,0,0,0,0}
@@ -39,6 +39,16 @@ namespace Othello
             set { joueur = value; }
         }
 
+        public int X
+        {
+            get { return _X; }
+        }
+
+        public int Y
+        {
+            get { return _Y; }
+        }
+
         public void setCase(int x, int y, int value)
         {
             damier[x, y] = value;
@@ -49,6 +59,24 @@ namespace Othello
             return damier[x, y];
         }
 
+        public int jouer(int x, int y)
+        {
+            if (this.damier[x, y] != 0)
+                return 0;
 
+            else if (joueur)
+                this.damier[x, y] = 1;
+
+            else
+                this.damier[x, y] = 2;
+
+            joueur = !joueur;
+            if (testFin())
+                return 2;
+            else
+                return 1;
+
+
+        }
     }
 }
