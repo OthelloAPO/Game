@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Othello", "Othello\Othello\Othello.csproj", "{A389C439-59A7-4DF2-8E1C-35FA37DC3AD2}"
+EndProject
+Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "OthelloContent", "Othello\OthelloContent\OthelloContent.contentproj", "{E2EDA322-E6E7-45BF-96E4-6BDF8809FF0C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A389C439-59A7-4DF2-8E1C-35FA37DC3AD2}.Debug|x86.ActiveCfg = Debug|x86
+		{A389C439-59A7-4DF2-8E1C-35FA37DC3AD2}.Debug|x86.Build.0 = Debug|x86
+		{A389C439-59A7-4DF2-8E1C-35FA37DC3AD2}.Release|x86.ActiveCfg = Release|x86
+		{A389C439-59A7-4DF2-8E1C-35FA37DC3AD2}.Release|x86.Build.0 = Release|x86
+		{E2EDA322-E6E7-45BF-96E4-6BDF8809FF0C}.Debug|x86.ActiveCfg = Debug|x86
+		{E2EDA322-E6E7-45BF-96E4-6BDF8809FF0C}.Release|x86.ActiveCfg = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
