@@ -78,6 +78,19 @@ namespace Othello
             // TODO: Add your update logic here
             KeyboardState keyboard = Keyboard.GetState();
 
+            if (etat >= 2)
+            {
+                if (keyboard.IsKeyDown(Keys.Enter))
+                {
+                    damier.nouvellePartie();
+                    xJoueur = 4;
+                    yJoueur = 4;
+                    toucheUp = true;
+                    etat = 0;
+                    ordi.Niveau++;
+                }
+            }
+
             if (damier.Joueur)
             {
                 if (keyboard.IsKeyDown(Keys.Right) && xJoueur < damier.X && toucheUp)
@@ -113,15 +126,49 @@ namespace Othello
 
 
             base.Update(gameTime);
-        }
+        } //gerer les etats
         
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
+            spriteBatch.Begin();
+
             // TODO: Add your drawing code here
+            int offsetX = 0;
+            int offsetY = 0;
+            SpriteFont _font;
+            _font = Content.Load<SpriteFont>("AfficherText");
+            Vector2 text = new Vector2(160, 0);
+
+            for (int x = 0; x < damier.X; x++)
+            {
+                for (int y = 0; y < damier.Y; y++)
+                {
+                    int xpos, ypos;
+                    xpos = offsetX + x * 57;
+                    ypos = offsetY + y * 57;
+                    Vector2 pos = new Vector2(ypos, xpos);
+                    if (damier.getCase(x, y) == 0)
+                        spriteBatch.Draw(cadre.Texture, pos, Color.White);
+                    else if (damier.getCase(x, y) == 2)
+                        spriteBatch.Draw(pionNoir.Texture, pos, Color.White);
+                    else if (damier.getCase(x, y) == 1)
+                        spriteBatch.Draw(pionBlanc.Texture, pos, Color.White);
+                    if (x == xJoueur && y == yJoueur)
+                        spriteBatch.Draw(jetonJoueur.Texture, pos, Color.White);
+                }
+            }
+            if (etat == 2)
+            {
+                spriteBatch.DrawString(_font, "Fin.", text, Color.White);
+            }
+
+            spriteBatch.End();
 
             base.Draw(gameTime);
+
+
         }
     }
 }
