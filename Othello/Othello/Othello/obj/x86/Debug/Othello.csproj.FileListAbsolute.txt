@@ -1,0 +1,16 @@
+D:\Loick\Documents\Visual Studio 2015\Projects\Game\Othello\Othello\Othello\bin\x86\Debug\Othello.exe
+D:\Loick\Documents\Visual Studio 2015\Projects\Game\Othello\Othello\Othello\bin\x86\Debug\Othello.pdb
+D:\Loick\Documents\Visual Studio 2015\Projects\Game\Othello\Othello\Othello\bin\x86\Debug\Microsoft.Xna.Framework.dll
+D:\Loick\Documents\Visual Studio 2015\Projects\Game\Othello\Othello\Othello\bin\x86\Debug\Microsoft.Xna.Framework.Game.dll
+D:\Loick\Documents\Visual Studio 2015\Projects\Game\Othello\Othello\Othello\bin\x86\Debug\Microsoft.Xna.Framework.GamerServices.dll
+D:\Loick\Documents\Visual Studio 2015\Projects\Game\Othello\Othello\Othello\bin\x86\Debug\Microsoft.Xna.Framework.Graphics.dll
+D:\Loick\Documents\Visual Studio 2015\Projects\Game\Othello\Othello\Othello\bin\x86\Debug\Microsoft.Xna.Framework.Input.Touch.dll
+D:\Loick\Documents\Visual Studio 2015\Projects\Game\Othello\Othello\Othello\bin\x86\Debug\Microsoft.Xna.Framework.xml
+D:\Loick\Documents\Visual Studio 2015\Projects\Game\Othello\Othello\Othello\bin\x86\Debug\Microsoft.Xna.Framework.Game.xml
+D:\Loick\Documents\Visual Studio 2015\Projects\Game\Othello\Othello\Othello\bin\x86\Debug\Microsoft.Xna.Framework.Graphics.xml
+D:\Loick\Documents\Visual Studio 2015\Projects\Game\Othello\Othello\Othello\bin\x86\Debug\Microsoft.Xna.Framework.GamerServices.xml
+D:\Loick\Documents\Visual Studio 2015\Projects\Game\Othello\Othello\Othello\bin\x86\Debug\Microsoft.Xna.Framework.Input.Touch.xml
+D:\Loick\Documents\Visual Studio 2015\Projects\Game\Othello\Othello\Othello\obj\x86\Debug\Othello.csprojResolveAssemblyReference.cache
+D:\Loick\Documents\Visual Studio 2015\Projects\Game\Othello\Othello\Othello\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+D:\Loick\Documents\Visual Studio 2015\Projects\Game\Othello\Othello\Othello\obj\x86\Debug\Othello.exe
+D:\Loick\Documents\Visual Studio 2015\Projects\Game\Othello\Othello\Othello\obj\x86\Debug\Othello.pdb

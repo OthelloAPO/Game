@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
+  <Asset Type="Pipeline:BuildItemCollection">
+    <BuildSuccessful>true</BuildSuccessful>
+    <Settings>
+      <ContentProjectGUID>{E2EDA322-E6E7-45BF-96E4-6BDF8809FF0C}</ContentProjectGUID>
+      <TargetPlatform>Windows</TargetPlatform>
+      <TargetProfile>Reach</TargetProfile>
+      <BuildConfiguration>Debug</BuildConfiguration>
+      <CompressContent>false</CompressContent>
+      <RootDirectory>D:\Loick\Documents\Visual Studio 2015\Projects\Game\Othello\Othello\OthelloContent\</RootDirectory>
+      <LoggerRootDirectory>D:\Loick\Documents\Visual Studio 2015\Projects\Game\Othello\Othello\Othello\</LoggerRootDirectory>
+      <IntermediateDirectory>D:\Loick\Documents\Visual Studio 2015\Projects\Game\Othello\Othello\Othello\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>D:\Loick\Documents\Visual Studio 2015\Projects\Game\Othello\Othello\Othello\bin\x86\Debug\Content\</OutputDirectory>
+    </Settings>
+    <Assemblies>
+      <Assembly>
+        <Key>C:\WINDOWS\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2016-01-15T17:13:05.0192985+01:00</Value>
+      </Assembly>
+    </Assemblies>
+  </Asset>
+</XnaContent>
