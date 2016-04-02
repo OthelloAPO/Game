@@ -14,3 +14,13 @@ D:\Loick\Documents\Visual Studio 2015\Projects\Game\Othello\Othello\Othello\obj\
 D:\Loick\Documents\Visual Studio 2015\Projects\Game\Othello\Othello\Othello\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 D:\Loick\Documents\Visual Studio 2015\Projects\Game\Othello\Othello\Othello\obj\x86\Debug\Othello.exe
 D:\Loick\Documents\Visual Studio 2015\Projects\Game\Othello\Othello\Othello\obj\x86\Debug\Othello.pdb
+D:\04 - Documents\01 - Polytech\Semestre_06\APO 2\Projet APO\Game\Othello\Othello\Othello\bin\x86\Debug\Othello.exe
+D:\04 - Documents\01 - Polytech\Semestre_06\APO 2\Projet APO\Game\Othello\Othello\Othello\bin\x86\Debug\Othello.pdb
+D:\04 - Documents\01 - Polytech\Semestre_06\APO 2\Projet APO\Game\Othello\Othello\Othello\obj\x86\Debug\Othello.csprojResolveAssemblyReference.cache
+D:\04 - Documents\01 - Polytech\Semestre_06\APO 2\Projet APO\Game\Othello\Othello\Othello\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+D:\04 - Documents\01 - Polytech\Semestre_06\APO 2\Projet APO\Game\Othello\Othello\Othello\obj\x86\Debug\Othello.exe
+D:\04 - Documents\01 - Polytech\Semestre_06\APO 2\Projet APO\Game\Othello\Othello\Othello\obj\x86\Debug\Othello.pdb
+D:\04 - Documents\01 - Polytech\Semestre_06\APO 2\Projet APO\Game\Othello\Othello\Othello\bin\x86\Debug\Content\objets\cadre.xnb
+D:\04 - Documents\01 - Polytech\Semestre_06\APO 2\Projet APO\Game\Othello\Othello\Othello\bin\x86\Debug\Content\objets\jetonJoueur.xnb
+D:\04 - Documents\01 - Polytech\Semestre_06\APO 2\Projet APO\Game\Othello\Othello\Othello\bin\x86\Debug\Content\objets\pionblanc.xnb
+D:\04 - Documents\01 - Polytech\Semestre_06\APO 2\Projet APO\Game\Othello\Othello\Othello\bin\x86\Debug\Content\objets\pionnoir.xnb

@@ -1,6 +1,42 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
   <Asset Type="Pipeline:BuildItemCollection">
+    <Item>
+      <Source>objets\cadre.png</Source>
+      <Name>objets\cadre</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\04 - Documents\01 - Polytech\Semestre_06\APO 2\Projet APO\Game\Othello\Othello\Othello\bin\x86\Debug\Content\objets\cadre.xnb</Output>
+      <Time>2016-01-31T13:29:41.4175824+01:00</Time>
+    </Item>
+    <Item>
+      <Source>objets\jetonJoueur.png</Source>
+      <Name>objets\jetonJoueur</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\04 - Documents\01 - Polytech\Semestre_06\APO 2\Projet APO\Game\Othello\Othello\Othello\bin\x86\Debug\Content\objets\jetonJoueur.xnb</Output>
+      <Time>2016-03-31T12:05:08.1566203+02:00</Time>
+    </Item>
+    <Item>
+      <Source>objets\pionblanc.png</Source>
+      <Name>objets\pionblanc</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\04 - Documents\01 - Polytech\Semestre_06\APO 2\Projet APO\Game\Othello\Othello\Othello\bin\x86\Debug\Content\objets\pionblanc.xnb</Output>
+      <Time>2016-01-31T13:29:41.4175824+01:00</Time>
+    </Item>
+    <Item>
+      <Source>objets\pionnoir.png</Source>
+      <Name>objets\pionnoir</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\04 - Documents\01 - Polytech\Semestre_06\APO 2\Projet APO\Game\Othello\Othello\Othello\bin\x86\Debug\Content\objets\pionnoir.xnb</Output>
+      <Time>2016-01-31T13:29:41.4275824+01:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{E2EDA322-E6E7-45BF-96E4-6BDF8809FF0C}</ContentProjectGUID>
@@ -8,15 +44,39 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>D:\Loick\Documents\Visual Studio 2015\Projects\Game\Othello\Othello\OthelloContent\</RootDirectory>
-      <LoggerRootDirectory>D:\Loick\Documents\Visual Studio 2015\Projects\Game\Othello\Othello\Othello\</LoggerRootDirectory>
-      <IntermediateDirectory>D:\Loick\Documents\Visual Studio 2015\Projects\Game\Othello\Othello\Othello\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>D:\Loick\Documents\Visual Studio 2015\Projects\Game\Othello\Othello\Othello\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>D:\04 - Documents\01 - Polytech\Semestre_06\APO 2\Projet APO\Game\Othello\Othello\OthelloContent\</RootDirectory>
+      <LoggerRootDirectory>D:\04 - Documents\01 - Polytech\Semestre_06\APO 2\Projet APO\Game\Othello\Othello\Othello\</LoggerRootDirectory>
+      <IntermediateDirectory>D:\04 - Documents\01 - Polytech\Semestre_06\APO 2\Projet APO\Game\Othello\Othello\Othello\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>D:\04 - Documents\01 - Polytech\Semestre_06\APO 2\Projet APO\Game\Othello\Othello\Othello\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
-        <Key>C:\WINDOWS\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2016-01-15T17:13:05.0192985+01:00</Value>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Value>2011-09-01T17:22:30+02:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Value>2011-09-01T17:22:30+02:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Value>2011-09-01T17:22:30+02:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Value>2011-09-01T17:22:30+02:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Value>2011-09-01T17:22:30+02:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Value>2011-09-01T17:22:30+02:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2015-12-16T08:37:19.9495135+01:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>

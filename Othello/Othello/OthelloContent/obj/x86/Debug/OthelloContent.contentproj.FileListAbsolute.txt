@@ -1,1 +1,2 @@
 D:\Loick\Documents\Visual Studio 2015\Projects\Game\Othello\Othello\OthelloContent\obj\x86\Debug\OthelloContent.contentprojResolveAssemblyReference.cache
+D:\04 - Documents\01 - Polytech\Semestre_06\APO 2\Projet APO\Game\Othello\Othello\OthelloContent\obj\x86\Debug\OthelloContent.contentprojResolveAssemblyReference.cache

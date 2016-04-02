@@ -98,7 +98,7 @@ namespace Othello
             {
                 for (int j = 0; j < _Y; j++)
                 {
-                    if (damier[X, Y] == 0)
+                    if (damier[i, j] == 0)
                         return false;
                 }
             }

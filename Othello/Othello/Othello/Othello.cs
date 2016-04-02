@@ -40,6 +40,7 @@ namespace Othello
             toucheUp = true;
 
             ordi = new IA(damier);
+            etat = 0;
         }
         
         protected override void Initialize()
@@ -93,7 +94,7 @@ namespace Othello
 
             if (damier.Joueur)
             {
-                if (keyboard.IsKeyDown(Keys.Right) && xJoueur < damier.X && toucheUp)
+                if (keyboard.IsKeyDown(Keys.Right) && xJoueur < damier.X -1 && toucheUp)
                 {
                     xJoueur++;
                     toucheUp = false;
@@ -103,30 +104,32 @@ namespace Othello
                     xJoueur--;
                     toucheUp = false;
                 }
-                else if (keyboard.IsKeyDown(Keys.Up) && yJoueur < damier.Y && toucheUp)
-                {
-                    yJoueur++;
-                    toucheUp = false;
-                }
-                else if (keyboard.IsKeyDown(Keys.Down) && yJoueur > damier.Y && toucheUp)
+                else if (keyboard.IsKeyDown(Keys.Up) && yJoueur > 0 && toucheUp)
                 {
                     yJoueur--;
                     toucheUp = false;
                 }
-
-                else if (keyboard.IsKeyUp(Keys.Left) && keyboard.IsKeyUp(Keys.Right) && keyboard.IsKeyUp(Keys.Down) && keyboard.IsKeyDown(Keys.Up) && keyboard.IsKeyDown(Keys.Space) && !toucheUp)
-                    toucheUp = true;
-
+                else if (keyboard.IsKeyDown(Keys.Down) && yJoueur < damier.Y -1 && toucheUp)
+                {
+                    yJoueur++;
+                    toucheUp = false;
+                }
                 else if (keyboard.IsKeyDown(Keys.Space) && toucheUp)
                 {
                     etat = damier.jouer(xJoueur, yJoueur);
                     toucheUp = false;
                 }
+                else if (keyboard.IsKeyUp(Keys.Left) && keyboard.IsKeyUp(Keys.Right) && keyboard.IsKeyUp(Keys.Down) && keyboard.IsKeyUp(Keys.Up) && keyboard.IsKeyUp(Keys.Space) && !toucheUp)
+                    toucheUp = true;
+
+               
             }
-
-
+            else
+            {
+                damier.Joueur = true; // a modifier par une IA
+            }
             base.Update(gameTime);
-        } //gerer les etats
+        }
         
         protected override void Draw(GameTime gameTime)
         {
@@ -137,8 +140,8 @@ namespace Othello
             // TODO: Add your drawing code here
             int offsetX = 0;
             int offsetY = 0;
-            SpriteFont _font;
-            _font = Content.Load<SpriteFont>("AfficherText");
+            //SpriteFont _font;
+           // _font = Content.Load<SpriteFont>("AfficherText");
             Vector2 text = new Vector2(160, 0);
 
             for (int x = 0; x < damier.X; x++)
@@ -148,7 +151,7 @@ namespace Othello
                     int xpos, ypos;
                     xpos = offsetX + x * 57;
                     ypos = offsetY + y * 57;
-                    Vector2 pos = new Vector2(ypos, xpos);
+                    Vector2 pos = new Vector2(xpos, ypos);
                     if (damier.getCase(x, y) == 0)
                         spriteBatch.Draw(cadre.Texture, pos, Color.White);
                     else if (damier.getCase(x, y) == 2)
@@ -161,7 +164,7 @@ namespace Othello
             }
             if (etat == 2)
             {
-                spriteBatch.DrawString(_font, "Fin.", text, Color.White);
+               // spriteBatch.DrawString(_font, "Fin.", text, Color.White);
             }
 
             spriteBatch.End();
