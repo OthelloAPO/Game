@@ -7,7 +7,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>D:\04 - Documents\01 - Polytech\Semestre_06\APO 2\Projet APO\Game\Othello\Othello\Othello\bin\x86\Debug\Content\objets\cadre.xnb</Output>
+      <Output>D:\04 - Documents\01 - Polytech\Semestre_06\APO 2\ProjetAPO\Game\Othello\Othello\Othello\bin\x86\Debug\Content\objets\cadre.xnb</Output>
       <Time>2016-01-31T13:29:41.4175824+01:00</Time>
     </Item>
     <Item>
@@ -16,7 +16,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>D:\04 - Documents\01 - Polytech\Semestre_06\APO 2\Projet APO\Game\Othello\Othello\Othello\bin\x86\Debug\Content\objets\jetonJoueur.xnb</Output>
+      <Output>D:\04 - Documents\01 - Polytech\Semestre_06\APO 2\ProjetAPO\Game\Othello\Othello\Othello\bin\x86\Debug\Content\objets\jetonJoueur.xnb</Output>
       <Time>2016-03-31T12:05:08.1566203+02:00</Time>
     </Item>
     <Item>
@@ -25,7 +25,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>D:\04 - Documents\01 - Polytech\Semestre_06\APO 2\Projet APO\Game\Othello\Othello\Othello\bin\x86\Debug\Content\objets\pionblanc.xnb</Output>
+      <Output>D:\04 - Documents\01 - Polytech\Semestre_06\APO 2\ProjetAPO\Game\Othello\Othello\Othello\bin\x86\Debug\Content\objets\pionblanc.xnb</Output>
       <Time>2016-01-31T13:29:41.4175824+01:00</Time>
     </Item>
     <Item>
@@ -34,7 +34,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>D:\04 - Documents\01 - Polytech\Semestre_06\APO 2\Projet APO\Game\Othello\Othello\Othello\bin\x86\Debug\Content\objets\pionnoir.xnb</Output>
+      <Output>D:\04 - Documents\01 - Polytech\Semestre_06\APO 2\ProjetAPO\Game\Othello\Othello\Othello\bin\x86\Debug\Content\objets\pionnoir.xnb</Output>
       <Time>2016-01-31T13:29:41.4275824+01:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
@@ -44,10 +44,10 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>D:\04 - Documents\01 - Polytech\Semestre_06\APO 2\Projet APO\Game\Othello\Othello\OthelloContent\</RootDirectory>
-      <LoggerRootDirectory>D:\04 - Documents\01 - Polytech\Semestre_06\APO 2\Projet APO\Game\Othello\Othello\Othello\</LoggerRootDirectory>
-      <IntermediateDirectory>D:\04 - Documents\01 - Polytech\Semestre_06\APO 2\Projet APO\Game\Othello\Othello\Othello\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>D:\04 - Documents\01 - Polytech\Semestre_06\APO 2\Projet APO\Game\Othello\Othello\Othello\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>D:\04 - Documents\01 - Polytech\Semestre_06\APO 2\ProjetAPO\Game\Othello\Othello\OthelloContent\</RootDirectory>
+      <LoggerRootDirectory>D:\04 - Documents\01 - Polytech\Semestre_06\APO 2\ProjetAPO\Game\Othello\Othello\Othello\</LoggerRootDirectory>
+      <IntermediateDirectory>D:\04 - Documents\01 - Polytech\Semestre_06\APO 2\ProjetAPO\Game\Othello\Othello\Othello\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>D:\04 - Documents\01 - Polytech\Semestre_06\APO 2\ProjetAPO\Game\Othello\Othello\Othello\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
