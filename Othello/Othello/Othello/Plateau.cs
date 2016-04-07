@@ -84,16 +84,17 @@ namespace Othello
         {
             for (int i = 0; i < caseJouable.Count ; i++)
             {
-                if (caseJouable[i].estEgale(x,y))
+                if (caseJouable[i].estEgale(x, y))
                     return true;
             }
-            return false;
+
+            return false; 
         }
 
         public int jouer(int x, int y)
         {
-            if (dansListe(x,y))
-                return 0;
+            if (!dansListe(x,y))
+                return 1;
             else if (joueur)
                 this.damier[x, y] = 1;
             else
@@ -104,7 +105,7 @@ namespace Othello
             if (testFin())
                 return 2;
             else
-                return 1;
+                return 0;
         }
 
         public bool testFin() //true si fini
@@ -155,8 +156,11 @@ namespace Othello
                     if (damier[i, y] == couleur)
                     {
                         for (int j = x - 1; j > i; j--)
+                        {
                             damier[j, y] = couleur;
                             compteur++;
+                        }
+                        break;
                     }
                 }
             }
@@ -170,8 +174,11 @@ namespace Othello
                     if (damier[i, y] == couleur)
                     {
                         for (int j = x + 1; j < i; j++)
+                        {
                             damier[j, y] = couleur;
                             compteur++;
+                        }
+                        break;
                     }
                 }
             }
@@ -191,8 +198,11 @@ namespace Othello
                     if (damier[x, i] == couleur)
                     {
                         for (int j = y - 1; j > i; j--)
+                        {
                             damier[x, j] = couleur;
                             compteur++;
+                        }
+                        break;
                     }
                 }
             }
@@ -206,8 +216,11 @@ namespace Othello
                     if (damier[x, i] == couleur)
                     {
                         for (int j = y + 1; j < i; j++)
+                        {
                             damier[x, j] = couleur;
                             compteur++;
+                        }
+                        break;
                     }
                 }
             }
@@ -233,6 +246,7 @@ namespace Othello
                             damier[x - k, y + k] = couleur;
                             compteur++; 
                         }
+                        break;
                     }
                     i++;
                     j--;
@@ -255,6 +269,7 @@ namespace Othello
                             damier[x - k, y + k] = couleur;
                             compteur++;
                         }
+                        break;
                     }
                     i--;
                     j++;
@@ -282,6 +297,7 @@ namespace Othello
                             damier[x - k, y - k] = couleur;
                             compteur++;
                         }
+                        break;
                     }
                     i--;
                     j--;
@@ -304,6 +320,7 @@ namespace Othello
                             damier[x - k, y - k] = couleur;
                             compteur++;
                         }
+                        break;
                     }
                     i++;
                     j++;
@@ -318,14 +335,13 @@ namespace Othello
         public int scannerPlateau()
         {
             caseJouable = new List<Case>();
-            Case c;
             for (int i = 0; i < _X; i++)
             {
                 for (int j = 0; j < _Y; j++)
                 {
                     if (damier[i, j] == 0 && scanRetourner(i, j) != 0)
                     {
-                        c = new Case(i, j);
+                        Case c = new Case(i, j);
                         caseJouable.Add(c);
                     }
                 }
@@ -349,7 +365,7 @@ namespace Othello
             else
                 couleur = 2;
 
-            int nbRetourne = 0;
+            int compteur = 0;
             //a gauche
             if (x > 1)
             {
@@ -360,7 +376,10 @@ namespace Othello
                     if (damier[i, y] == couleur)
                     {
                         for (int j = x - 1; j > i; j--)
-                            nbRetourne++;
+                        {
+                            compteur++;
+                        }
+                        break;
                     }
                 }
             }
@@ -374,11 +393,14 @@ namespace Othello
                     if (damier[i, y] == couleur)
                     {
                         for (int j = x + 1; j < i; j++)
-                            nbRetourne++;
+                        {
+                            compteur++;
+                        }
+                        break;
                     }
                 }
             }
-            return nbRetourne;
+            return compteur;
         }
         public int scanerColonne(int x, int y)
         {
@@ -388,7 +410,7 @@ namespace Othello
             else
                 couleur = 2;
 
-            int nbRetourne = 0;
+            int compteur = 0;
             //en haut
             if (y > 1)
             {
@@ -399,7 +421,10 @@ namespace Othello
                     if (damier[x, i] == couleur)
                     {
                         for (int j = y - 1; j > i; j--)
-                            nbRetourne++;
+                        {
+                            compteur++;
+                        }
+                        break;
                     }
                 }
             }
@@ -413,11 +438,14 @@ namespace Othello
                     if (damier[x, i] == couleur)
                     {
                         for (int j = y + 1; j < i; j++)
-                            nbRetourne++;
+                        {
+                            compteur++;
+                        }
+                        break;
                     }
                 }
             }
-            return nbRetourne;
+            return compteur;
         }
         public int scanerDiagD(int x, int y)
         {
@@ -427,7 +455,7 @@ namespace Othello
             else
                 couleur = 2;
 
-            int nbRetourne = 0;
+            int compteur = 0;
             //en haut
             if (y > 1 && x < _X - 1)
             {
@@ -441,8 +469,9 @@ namespace Othello
                     {
                         for (int k = x - i + 1; k < 0; k++)
                         {
-                            nbRetourne++;
+                            compteur++;
                         }
+                        break;
                     }
                     i++;
                     j--;
@@ -462,14 +491,15 @@ namespace Othello
                     {
                         for (int k = x - i - 1; k > 0; k--)
                         {
-                            nbRetourne++;
+                            compteur++;
                         }
+                        break;
                     }
                     i--;
                     j++;
                 }
             }
-            return nbRetourne;
+            return compteur;
         }
         public int scanerDiagG(int x, int y)
         {
@@ -479,7 +509,7 @@ namespace Othello
             else
                 couleur = 2;
 
-            int nbRetourne = 0;
+            int compteur = 0;
             //en haut
             if (y > 1 && x > 1)
             {
@@ -493,8 +523,9 @@ namespace Othello
                     {
                         for (int k = x - i - 1; k > 0; k--)
                         {
-                            nbRetourne++;
+                            compteur++;
                         }
+                        break;
                     }
                     i--;
                     j--;
@@ -514,14 +545,15 @@ namespace Othello
                     {
                         for (int k = x - i + 1; k < 0; k++)
                         {
-                            nbRetourne++;
+                            compteur++;
                         }
+                        break;
                     }
                     i++;
                     j++;
                 }
             }
-            return nbRetourne;
+            return compteur;
         }
 
 

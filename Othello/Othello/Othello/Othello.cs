@@ -119,6 +119,7 @@ namespace Othello
                 }
                 else
                 {
+                    etat = 0;
                     damier.Joueur = true; // a modifier par une IA
                 }
             }
