@@ -8,6 +8,7 @@ using Microsoft.Xna.Framework.GamerServices;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
+using System.Collections;
 
 namespace Othello
 {
@@ -17,6 +18,7 @@ namespace Othello
         private const int _X = 8;
         private const int _Y = 8;
         private bool joueur; //True si joueur1
+        private ArrayList caseJouable;
 
         public Plateau()
         {
@@ -31,6 +33,7 @@ namespace Othello
                 {0,0,0,0,0,0,0,0},
                 {0,0,0,0,0,0,0,0}
             };
+            caseJouable = new ArrayList();
         }
 
         public void nouvellePartie()
@@ -46,6 +49,20 @@ namespace Othello
                 {0,0,0,0,0,0,0,0},
                 {0,0,0,0,0,0,0,0}
             };
+        }
+
+        public void scannerPlateau()
+        {
+            caseJouable = new ArrayList();
+            for (int i = 0; i < _X; i++) {
+                for (int j = 0; j < _Y; j++) {
+                    if (damier[i, j] == 0 && retourner(i, j) != 0)
+                    {
+                        caseJouable.Add(i);
+                        caseJouable.Add(j);
+                    }
+                }
+            }
         }
 
         public bool Joueur
@@ -108,15 +125,15 @@ namespace Othello
         /// /////////////////////////////////////////////////////////////////////////////////////////////////////
         /// retourner
          
-        public void retourner(int x, int y)
+        public int retourner(int x, int y)
         {
-            retournerLigne(x, y);// comme ca : | 
-            retournerColonne(x, y);// comme ca : -
-            retournerDiagD(x, y);// comme ca : /
-            retournerDiagG(x, y);// comme ca : \
+            return retournerLigne(x, y) + // comme ca : | 
+            retournerColonne(x, y) + // comme ca : -
+            retournerDiagD(x, y) + // comme ca : /
+            retournerDiagG(x, y); // comme ca : \
         }
         
-        public void retournerLigne(int x, int y)
+        public int retournerLigne(int x, int y)
         {
             int couleur = damier[x, y];
             //a gauche
@@ -147,8 +164,9 @@ namespace Othello
                     }
                 }
             }
+            return 0;
         }
-        public void retournerColonne(int x, int y)
+        public int retournerColonne(int x, int y)
         {
             int couleur = damier[x, y];
             //en haut
@@ -170,17 +188,18 @@ namespace Othello
             {
                 for (int i = y + 1; i <= _Y; i++)
                 {
-                    if (damier[i, y] == 0)
+                    if (damier[x, i] == 0)
                         break;
-                    if (damier[i, y] == couleur)
+                    if (damier[x, i] == couleur)
                     {
                         for (int j = y + 1; j < i; j++)
-                            damier[j, y] = couleur;
+                            damier[x, j] = couleur;
                     }
                 }
             }
+            return 0;
         }
-        public void retournerDiagD(int x, int y)
+        public int retournerDiagD(int x, int y)
         {
             int couleur = damier[x, y];
             //en haut
@@ -223,10 +242,10 @@ namespace Othello
                     i--;
                     j++;
                 }
-
             }
+            return 0;
         }
-        public void retournerDiagG(int x, int y)
+        public int retournerDiagG(int x, int y)
         {
             int couleur = damier[x, y];
             //en haut
@@ -269,8 +288,8 @@ namespace Othello
                     i++;
                     j++;
                 }
-
             }
+            return 0;
         }
         /// /////////////////////////////////////////////////////////////////////////////////////////////////////
     }
