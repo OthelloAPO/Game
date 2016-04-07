@@ -81,10 +81,10 @@ namespace Othello
 
             if (etat == 0) // remplir le tableau
             {
-                etat = 1;
+                etat = 1;// damier.scannerPlateau();
             }
-            else if (etat == 1) // jouer la piece
-            {
+            else if (etat < 2) // jouer la piece
+            { //ajout condition si tableau vide etat =1.5
                 if (damier.Joueur)
                 {
                     if (keyboard.IsKeyDown(Keys.Right) && xJoueur < damier.X - 1 && toucheUp)
