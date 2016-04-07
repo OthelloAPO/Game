@@ -18,7 +18,7 @@ namespace Othello
         private const int _X = 8;
         private const int _Y = 8;
         private bool joueur; //True si joueur1
-        private ArrayList caseJouable;
+        private List<Case> caseJouable;
         private int[] score;
 
         public Plateau()
@@ -34,7 +34,7 @@ namespace Othello
                 {0,0,0,0,0,0,0,0},
                 {0,0,0,0,0,0,0,0}
             };
-            caseJouable = new ArrayList();
+            caseJouable = new List<Case>();
             score = new int[2] { 2, 2 };
         }
 
@@ -80,10 +80,19 @@ namespace Othello
             return damier[x, y];
         }
 
+        public Boolean dansListe(int x, int y)
+        {
+            for (int i = 0; i < caseJouable.Count ; i++)
+            {
+                if (caseJouable[i].estEgale(x,y))
+                    return true;
+            }
+            return false;
+        }
+
         public int jouer(int x, int y)
         {
-            //if je peux manger
-            if (this.damier[x, y] != 0)
+            if (dansListe(x,y))
                 return 0;
             else if (joueur)
                 this.damier[x, y] = 1;
@@ -154,7 +163,7 @@ namespace Othello
             //a droite
             if (x < _X-1)
             {
-                for (int i = x + 1; i <= _X; i++)
+                for (int i = x + 1; i < _X; i++)
                 {
                     if (damier[i, y] == 0)
                         break;
@@ -190,7 +199,7 @@ namespace Othello
             //en bas
             if (y < _Y - 1)
             {
-                for (int i = y + 1; i <= _Y; i++)
+                for (int i = y + 1; i < _Y; i++)
                 {
                     if (damier[x, i] == 0)
                         break;
@@ -213,7 +222,7 @@ namespace Othello
             {
                 int i = x + 1;
                 int j = y - 1;
-                while(i != _X || j != 0)
+                while(i != _X && j != 0)
                 {
                     if (damier[i, j] == 0)
                         break;
@@ -235,7 +244,7 @@ namespace Othello
             {
                 int i = x - 1;
                 int j = y + 1;
-                while (i != 0 || j != _Y)
+                while (i != 0 && j != _Y)
                 {
                     if (damier[i, j] == 0)
                         break;
@@ -262,7 +271,7 @@ namespace Othello
             {
                 int i = x - 1;
                 int j = y - 1;
-                while (i != 0 || j != 0)
+                while (i != 0 && j != 0)
                 {
                     if (damier[i, j] == 0)
                         break;
@@ -284,7 +293,7 @@ namespace Othello
             {
                 int i = x + 1;
                 int j = y + 1;
-                while (i != _X || j != _Y)
+                while (i != _X && j != _Y)
                 {
                     if (damier[i, j] == 0)
                         break;
@@ -308,15 +317,16 @@ namespace Othello
 
         public int scannerPlateau()
         {
-            caseJouable = new ArrayList();
+            caseJouable = new List<Case>();
+            Case c;
             for (int i = 0; i < _X; i++)
             {
                 for (int j = 0; j < _Y; j++)
                 {
                     if (damier[i, j] == 0 && scanRetourner(i, j) != 0)
                     {
-                        caseJouable.Add(i);
-                        caseJouable.Add(j);
+                        c = new Case(i, j);
+                        caseJouable.Add(c);
                     }
                 }
             }
@@ -357,7 +367,7 @@ namespace Othello
             //a droite
             if (x < _X - 1)
             {
-                for (int i = x + 1; i <= _X; i++)
+                for (int i = x + 1; i < _X; i++)
                 {
                     if (damier[i, y] == 0)
                         break;
@@ -396,7 +406,7 @@ namespace Othello
             //en bas
             if (y < _Y - 1)
             {
-                for (int i = y + 1; i <= _Y; i++)
+                for (int i = y + 1; i < _Y; i++)
                 {
                     if (damier[x, i] == 0)
                         break;
@@ -423,7 +433,7 @@ namespace Othello
             {
                 int i = x + 1;
                 int j = y - 1;
-                while (i != _X || j != 0)
+                while (i != _X && j != 0)
                 {
                     if (damier[i, j] == 0)
                         break;
@@ -444,7 +454,7 @@ namespace Othello
             {
                 int i = x - 1;
                 int j = y + 1;
-                while (i != 0 || j != _Y)
+                while (i != 0 && j != _Y)
                 {
                     if (damier[i, j] == 0)
                         break;
@@ -475,7 +485,7 @@ namespace Othello
             {
                 int i = x - 1;
                 int j = y - 1;
-                while (i != 0 || j != 0)
+                while (i != 0 && j != 0)
                 {
                     if (damier[i, j] == 0)
                         break;
@@ -496,7 +506,7 @@ namespace Othello
             {
                 int i = x + 1;
                 int j = y + 1;
-                while (i != _X || j != _Y)
+                while (i != _X && j != _Y)
                 {
                     if (damier[i, j] == 0)
                         break;

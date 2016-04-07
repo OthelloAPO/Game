@@ -57,6 +57,7 @@
     <Reference Include="System.Net" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Case.cs" />
     <Compile Include="IA.cs" />
     <Compile Include="ObjetOthello.cs" />
     <Compile Include="Plateau.cs" />
