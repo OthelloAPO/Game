@@ -333,8 +333,13 @@ namespace Othello
 
         public int scanerLigne(int x, int y)
         {
-            int couleur = damier[x, y];
-            int nbRetourne=0;
+            int couleur;
+            if (joueur)
+                couleur = 1;
+            else
+                couleur = 2;
+
+            int nbRetourne = 0;
             //a gauche
             if (x > 1)
             {
@@ -367,7 +372,12 @@ namespace Othello
         }
         public int scanerColonne(int x, int y)
         {
-            int couleur = damier[x, y];
+            int couleur;
+            if (joueur)
+                couleur = 1;
+            else
+                couleur = 2;
+
             int nbRetourne = 0;
             //en haut
             if (y > 1)
@@ -401,7 +411,12 @@ namespace Othello
         }
         public int scanerDiagD(int x, int y)
         {
-            int couleur = damier[x, y];
+            int couleur;
+            if (joueur)
+                couleur = 1;
+            else
+                couleur = 2;
+
             int nbRetourne = 0;
             //en haut
             if (y > 1 && x < _X - 1)
@@ -448,7 +463,12 @@ namespace Othello
         }
         public int scanerDiagG(int x, int y)
         {
-            int couleur = damier[x, y];
+            int couleur;
+            if (joueur)
+                couleur = 1;
+            else
+                couleur = 2;
+
             int nbRetourne = 0;
             //en haut
             if (y > 1 && x > 1)
@@ -482,7 +502,7 @@ namespace Othello
                         break;
                     if (damier[i, j] == couleur)
                     {
-                        for (int k = x - i - 1; k > 0; k--)
+                        for (int k = x - i + 1; k < 0; k++)
                         {
                             nbRetourne++;
                         }

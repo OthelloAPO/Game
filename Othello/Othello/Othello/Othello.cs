@@ -81,7 +81,7 @@ namespace Othello
 
             if (etat == 0) // remplir le tableau
             {
-                etat = 1;// damier.scannerPlateau();
+                etat = damier.scannerPlateau();
             }
             else if (etat < 2) // jouer la piece
             { //ajout condition si tableau vide etat =1.5
