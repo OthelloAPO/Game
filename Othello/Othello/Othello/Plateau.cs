@@ -290,9 +290,9 @@ namespace Othello
                         break;
                     if (damier[i, j] == couleur)
                     {
-                        for (int k = x - i -1; k > 0; k--)
+                        for (int k = x - i + 1; k < 0; k++)
                         {
-                            damier[x + k, y + k] = couleur;
+                            damier[x - k, y - k] = couleur;
                             compteur++;
                         }
                     }
@@ -305,7 +305,6 @@ namespace Othello
 
         /// /////////////////////////////////////////////////////////////////////////////////////////////////////
         /// Scan retourner
-
 
         public int scannerPlateau()
         {
