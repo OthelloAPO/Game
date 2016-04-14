@@ -15,12 +15,10 @@ namespace Othello
     class IA
     {
         private int niveau;
-        private Random rnd;
         private Plateau damier;
 
         public IA(Plateau damier)
         {
-            rnd = new Random();
             this.niveau = 1;
             this.damier = damier;
         }
@@ -29,6 +27,17 @@ namespace Othello
         {
             get { return niveau; }
             set { niveau = value; }
+        }
+
+        public void Jouer()
+        {
+            if (damier.CaseJouable.Count != 0)
+            {
+                Random rnd = new Random();
+                int n = rnd.Next(1, damier.CaseJouable.Count);
+                Case c = damier.getCaseJouable(n - 1);
+                damier.jouer(c.X, c.Y);
+            }
         }
 
 

@@ -58,12 +58,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Case.cs" />
+    <Compile Include="DeuxJoueur.cs" />
     <Compile Include="IA.cs" />
+    <Compile Include="Jeu.cs" />
     <Compile Include="ObjetOthello.cs" />
     <Compile Include="Plateau.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Othello.cs" />
+    <Compile Include="UnJoueur.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Game.ico" />

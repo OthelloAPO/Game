@@ -65,6 +65,17 @@ namespace Othello
             get { return _X; }
         }
 
+        public List<Case> CaseJouable
+        {
+            get { return caseJouable; }
+            set { caseJouable = value; }
+        }
+
+        public Case getCaseJouable(int x)
+        {
+            return caseJouable[x];
+        }
+
         public int Y
         {
             get { return _Y; }
