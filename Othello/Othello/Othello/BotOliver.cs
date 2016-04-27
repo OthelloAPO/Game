@@ -12,9 +12,9 @@ using Microsoft.Xna.Framework.Media;
 
 namespace Othello
 {
-    class BotOlivier : Player
+    class BotOliver : Player
     {
-        public BotOlivier(Plateau plateau) : base(plateau)
+        public BotOliver(Plateau plateau) : base(plateau)
         {
         }
 

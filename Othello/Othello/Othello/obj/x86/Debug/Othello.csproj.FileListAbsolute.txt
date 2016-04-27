@@ -38,3 +38,4 @@ D:\Loick\Documents\Visual Studio 2015\Projects\Game\Othello\Othello\Othello\bin\
 D:\Loick\Documents\Visual Studio 2015\Projects\Game\Othello\Othello\Othello\bin\x86\Debug\Content\objets\jetonJoueur.xnb
 D:\Loick\Documents\Visual Studio 2015\Projects\Game\Othello\Othello\Othello\bin\x86\Debug\Content\objets\pionblanc.xnb
 D:\Loick\Documents\Visual Studio 2015\Projects\Game\Othello\Othello\Othello\bin\x86\Debug\Content\objets\pionnoir.xnb
+D:\Loick\Documents\Visual Studio 2015\Projects\Game\Othello\Othello\Othello\bin\x86\Debug\Content\objets\MyFont.xnb

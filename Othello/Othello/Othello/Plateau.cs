@@ -53,7 +53,13 @@ namespace Othello
             };
             score = new int[2] { 2, 2 };
         }
-        
+
+        public int[] Score
+        {
+            get { return score; }
+            set { score = value; }
+        }
+
         public bool Joueur
         {
             get { return joueur; }
@@ -115,9 +121,44 @@ namespace Othello
             return true;
         }
 
+        public Plateau copie()
+        {
+            Plateau plapla = new Plateau();
+            for(int i=0; i<_X; i++)
+            {
+                for(int j=0; j<_Y; j++)
+                {
+                    plapla.damier[i, j] = this.damier[i, j];
+                }
+            }
+            for(int k =0; k<this.caseJouable.Count; k++)
+            {
+                plapla.caseJouable.Add(this.caseJouable[k]);
+            }
+            plapla.joueur = this.joueur;
+            plapla.score = this.score;
+            return plapla;
+        }
+
+        public int placer(int x, int y)
+        {
+            if (!dansListe(x, y))
+                return 20;
+            else if (Joueur)
+                setCase(x, y, 1);
+            else
+                setCase(x, y, 2);
+
+            retourner(x, y);
+            Joueur = !Joueur;
+            if (testComplet())
+                return 30;
+            else
+                return 10;
+        }
         /// /////////////////////////////////////////////////////////////////////////////////////////////////////
         /// retourner
-         
+
         public void retourner(int x, int y)
         {
             int points= retournerLigne(x, y) + // comme ca : | 

@@ -15,6 +15,7 @@ namespace Othello
     {
         private GraphicsDeviceManager graphics;
         private SpriteBatch spriteBatch;
+        private SpriteFont _font;
 
         private ObjetOthello cadre;
         private ObjetOthello pionBlanc;
@@ -33,17 +34,17 @@ namespace Othello
 
             plateau = new Plateau();
             etat = 10;
-            p1 = new Human(plateau);
-            p2 = new BotEric(plateau);
+            p1 = new BotEric(plateau);
+            p2 = new BotAsh(plateau);
         }
-        
+
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
 
             base.Initialize();
         } // vide
-        
+
         protected override void LoadContent()
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
@@ -56,47 +57,50 @@ namespace Othello
             pionBlanc = new ObjetOthello(Content.Load<Texture2D>("objets\\pionblanc"), new Vector2(0f, 0f), new Vector2(100f, 100f));
             pionNoir = new ObjetOthello(Content.Load<Texture2D>("objets\\pionnoir"), new Vector2(0f, 0f), new Vector2(100f, 100f));
             jetonJoueur = new ObjetOthello(Content.Load<Texture2D>("objets\\jetonjoueur"), new Vector2(0f, 0f), new Vector2(100f, 100f));
-        } // a voir!
+
+            _font = Content.Load<SpriteFont>("objets\\MyFont");
+
+        }
 
         protected override void UnloadContent()
         {
             // TODO: Unload any non ContentManager content here
         }  // vide
-        
+
         protected override void Update(GameTime gameTime)
         {
             // TODO: Add your update logic here
             switch (etat)
             {
                 case 0:  //menu
-                       break; 
+                    break;
                 case 10: // remplir liste
-                        etat = plateau.scannerPlateau(); 
-                        break;
+                    etat = plateau.scannerPlateau();
+                    break;
                 case 20: // choisir joueur et jouer
-                        if (plateau.Joueur)
-                            etat = p1.Jouer();
-                        else
-                        {
-                            System.Threading.Thread.Sleep(500);
-                            etat = p2.Jouer();
-                        }                            
-                         break;
+                    if (plateau.Joueur)
+                        etat = p1.Jouer();
+                    else
+                    {
+                        System.Threading.Thread.Sleep(500);
+                        etat = p2.Jouer();
+                    }
+                    break;
                 case 25: // un as pas pu jouer
-                        etat = plateau.scannerPlateau();
-                        if (etat == 25)
-                            etat = 30;
-                        break;
-                case 30: // un as pas pu jouer
-                        break;
+                    etat = plateau.scannerPlateau();
+                    if (etat == 25)
+                        etat = 30;
+                    break;
+                case 30: // fini les amis
+                    break;
                 default:// beug 
-                        break; 
+                    break;
             }
-            
-            
+
+
             base.Update(gameTime);
         }
-        
+
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
@@ -105,18 +109,26 @@ namespace Othello
             // TODO: Add your drawing code here
             if (etat == 0) // affiche menu
             {
-                //menu
+                spriteBatch.DrawString(_font, "Menu", new Vector2(185, 20), Color.White);
+                spriteBatch.DrawString(_font, "Un joueur", new Vector2(160, 100), Color.White);
+                spriteBatch.DrawString(_font, "Deux joueurs", new Vector2(145, 140), Color.White);
             }
             else if (etat == 30) // afficher score
             {
-                //score
+                spriteBatch.DrawString(_font, "Jaune :  " + plateau.Score[0], new Vector2(160, 100), Color.White);
+                spriteBatch.DrawString(_font, "Rouge :  " + plateau.Score[1], new Vector2(160, 140), Color.White);
+
+                if (plateau.Score[0] > plateau.Score[1])
+                    spriteBatch.DrawString(_font, "Les Jaunes remportent!!", new Vector2(110, 20), Color.White);
+                else if (plateau.Score[0] < plateau.Score[1])
+                    spriteBatch.DrawString(_font, "Les Rouges remportent!!", new Vector2(110, 20), Color.White);
+                else
+                    spriteBatch.DrawString(_font, "Egalite...", new Vector2(160, 20), Color.White);
             }
             else // affiche grille
             {
                 int offsetX = 0;
                 int offsetY = 0;
-                //SpriteFont _font;
-                // _font = Content.Load<SpriteFont>("AfficherText");
                 Vector2 text = new Vector2(160, 0);
 
                 for (int x = 0; x < plateau.X; x++)
@@ -135,15 +147,15 @@ namespace Othello
                             spriteBatch.Draw(pionBlanc.Texture, pos, Color.White);
                         if (p1.GetType() == typeof(Human))
                         {
-                            Human h = (Human) p1;
+                            Human h = (Human)p1;
                             if (x == h.XJoueur && y == h.YJoueur)
                                 spriteBatch.Draw(jetonJoueur.Texture, pos, Color.White);
                         }
-                            
+
                     }
                 }
             }
-             
+
 
             spriteBatch.End();
 
@@ -153,3 +165,4 @@ namespace Othello
         }
     }
 }
+
