@@ -34,7 +34,7 @@ namespace Othello
 
             plateau = new Plateau();
             etat = 10;
-            p1 = new BotEric(plateau);
+            p1 = new BotAsh(plateau);
             p2 = new BotOliver(plateau);
         }
 
@@ -59,7 +59,6 @@ namespace Othello
             jetonJoueur = new ObjetOthello(Content.Load<Texture2D>("objets\\jetonjoueur"), new Vector2(0f, 0f), new Vector2(100f, 100f));
 
             _font = Content.Load<SpriteFont>("objets\\MyFont");
-
         }
 
         protected override void UnloadContent()
@@ -102,30 +101,34 @@ namespace Othello
 
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
-            spriteBatch.Begin();
 
             // TODO: Add your drawing code here
             if (etat == 0) // affiche menu
             {
+                GraphicsDevice.Clear(Color.ForestGreen);
+                spriteBatch.Begin();
                 spriteBatch.DrawString(_font, "Menu", new Vector2(185, 20), Color.White);
                 spriteBatch.DrawString(_font, "Un joueur", new Vector2(160, 100), Color.White);
                 spriteBatch.DrawString(_font, "Deux joueurs", new Vector2(145, 140), Color.White);
             }
             else if (etat == 30) // afficher score
             {
-                spriteBatch.DrawString(_font, "Jaune :  " + plateau.Score[0], new Vector2(160, 100), Color.White);
-                spriteBatch.DrawString(_font, "Rouge :  " + plateau.Score[1], new Vector2(160, 140), Color.White);
+                GraphicsDevice.Clear(Color.ForestGreen);
+                spriteBatch.Begin();
+                spriteBatch.DrawString(_font, "Blanc :  " + plateau.Score[0], new Vector2(160, 100), Color.White);
+                spriteBatch.DrawString(_font, "Noire :  " + plateau.Score[1], new Vector2(160, 140), Color.White);
 
                 if (plateau.Score[0] > plateau.Score[1])
-                    spriteBatch.DrawString(_font, "Les Jaunes remportent!!", new Vector2(110, 20), Color.White);
+                    spriteBatch.DrawString(_font, "Les blancs remportent !", new Vector2(110, 20), Color.White);
                 else if (plateau.Score[0] < plateau.Score[1])
-                    spriteBatch.DrawString(_font, "Les Rouges remportent!!", new Vector2(110, 20), Color.White);
+                    spriteBatch.DrawString(_font, "Les noires remportent !", new Vector2(110, 20), Color.White);
                 else
                     spriteBatch.DrawString(_font, "Egalite...", new Vector2(160, 20), Color.White);
             }
             else // affiche grille
             {
+                GraphicsDevice.Clear(Color.DarkGray);
+                spriteBatch.Begin();
                 int offsetX = 0;
                 int offsetY = 0;
                 Vector2 text = new Vector2(160, 0);

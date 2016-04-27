@@ -26,26 +26,9 @@ namespace Othello
                         j = i;
                     }
                 }
-                return placer(plateau.getCaseJouable(j).X, plateau.getCaseJouable(j).Y);
+                return plateau.placer(plateau.getCaseJouable(j).X, plateau.getCaseJouable(j).Y);
             }
             return 25;
-        }
-
-        public int placer(int x, int y)
-        {
-            if (!plateau.dansListe(x, y))
-                return 20;
-            else if (plateau.Joueur)
-                plateau.setCase(x, y, 1);
-            else
-                plateau.setCase(x, y, 2);
-
-            plateau.retourner(x, y);
-            plateau.Joueur = !plateau.Joueur;
-            if (plateau.testComplet())
-                return 30;
-            else
-                return 10;
         }
     }
 }

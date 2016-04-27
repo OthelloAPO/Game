@@ -18,11 +18,11 @@ namespace Othello
                 int i = 0;
                 int j = i;
                 Plateau plapla = plateau.copie();
-                int score = chercherCase(plapla.getCaseJouable(i), plapla, 5);
+                int score = chercherCase(plapla.getCaseJouable(i), plapla, 0);
                 for (i = 1; i < plateau.CaseJouable.Count; i++)
                 {
                     Plateau plipli = plateau.copie();
-                    int score2 = chercherCase(plipli.getCaseJouable(i), plapla, 5);
+                    int score2 = chercherCase(plipli.getCaseJouable(i), plapla, 0);
                     if (score < score2)
                     {
                         j = i;

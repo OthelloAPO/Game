@@ -25,26 +25,9 @@ namespace Othello
                 Random rnd = new Random();
                 int n = rnd.Next(1, plateau.CaseJouable.Count);
                 Case c = plateau.getCaseJouable(n - 1);
-                return placer(c.X, c.Y);
+                return plateau.placer(c.X, c.Y);
             }
             return 25;
-        }
-
-        public int placer(int x, int y)
-        {
-            if (!plateau.dansListe(x, y))
-                return 20;
-            else if (plateau.Joueur)
-                plateau.setCase(x, y, 1);
-            else
-                plateau.setCase(x, y, 2);
-
-            plateau.retourner(x, y);
-            plateau.Joueur = !plateau.Joueur;
-            if (plateau.testComplet())
-                return 30;
-            else
-                return 10;
         }
     }
 }

@@ -8,7 +8,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>D:\Loick\Documents\Visual Studio 2015\Projects\Game\Othello\Othello\Othello\bin\x86\Debug\Content\objets\cadre.xnb</Output>
-      <Time>2016-04-27T14:19:12.2013295+02:00</Time>
+      <Time>2016-04-27T15:08:21.7096555+02:00</Time>
     </Item>
     <Item>
       <Source>objets\jetonJoueur.png</Source>
@@ -26,7 +26,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>D:\Loick\Documents\Visual Studio 2015\Projects\Game\Othello\Othello\Othello\bin\x86\Debug\Content\objets\pionblanc.xnb</Output>
-      <Time>2016-04-27T14:20:56.0939465+02:00</Time>
+      <Time>2016-04-27T15:09:19.0369238+02:00</Time>
     </Item>
     <Item>
       <Source>objets\pionnoir.png</Source>
@@ -35,7 +35,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>D:\Loick\Documents\Visual Studio 2015\Projects\Game\Othello\Othello\Othello\bin\x86\Debug\Content\objets\pionnoir.xnb</Output>
-      <Time>2016-04-27T14:22:15.9072101+02:00</Time>
+      <Time>2016-04-27T15:09:34.3343924+02:00</Time>
     </Item>
     <Item>
       <Source>objets\MyFont.spritefont</Source>

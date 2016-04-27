@@ -136,7 +136,8 @@ namespace Othello
                 plapla.caseJouable.Add(this.caseJouable[k]);
             }
             plapla.joueur = this.joueur;
-            plapla.score = this.score;
+            plapla.score[0] = this.score[0];
+            plapla.score[1] = this.score[1];
             return plapla;
         }
 
@@ -167,13 +168,13 @@ namespace Othello
             retournerDiagG(x, y); // comme ca : \
             if (joueur)
             {
-                score[0] += points;
+                score[0] += points+1;
                 score[1] -= points;
             }
             else
             {
                 score[0] -= points;
-                score[1] += points;
+                score[1] += points+1;
             }
         }
         
