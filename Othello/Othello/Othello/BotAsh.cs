@@ -26,6 +26,7 @@ namespace Othello
                     if (score < score2)
                     {
                         j = i;
+                        score = score2;
                     }
                 }
                 return plateau.placer(plateau.getCaseJouable(j).X, plateau.getCaseJouable(j).Y);

@@ -64,30 +64,13 @@ namespace Othello
             else if (keyboard.IsKeyDown(Keys.Space) && toucheUp)
             {
                 toucheUp = false;
-                return placer(xJoueur, yJoueur);
+                return plateau.placer(xJoueur, yJoueur);
             }
             else if (keyboard.IsKeyUp(Keys.Left) && keyboard.IsKeyUp(Keys.Right) && keyboard.IsKeyUp(Keys.Down) && keyboard.IsKeyUp(Keys.Up) && keyboard.IsKeyUp(Keys.Space) && !toucheUp)
             {
                 toucheUp = true;
             }
             return 20;
-        }
-
-        public int placer(int x, int y)
-        {
-            if (!plateau.dansListe(x, y))
-                return 20;
-            else if (plateau.Joueur)
-                plateau.setCase(x, y, 1);
-            else
-                plateau.setCase(x, y, 2);
-
-            plateau.retourner(x, y);
-            plateau.Joueur = !plateau.Joueur;
-            if (plateau.testComplet())
-                return 30;
-            else
-                return 10;
         }
     }
 }
