@@ -16,13 +16,14 @@ namespace Othello
             if (plateau.CaseJouable.Count != 0)
             {
                 int i = 0;
-                int j = i;
+                int j = 0;
                 Plateau plapla = plateau.copie();
-                int score = chercherCase(plapla.getCaseJouable(i), plapla, 0);
+                int score = chercherCase(plapla.getCaseJouable(i), plapla, 4);
+
                 for (i = 1; i < plateau.CaseJouable.Count; i++)
                 {
-                    Plateau plipli = plateau.copie();
-                    int score2 = chercherCase(plipli.getCaseJouable(i), plapla, 0);
+                    plapla = plateau.copie();
+                    int score2 = chercherCase(plapla.getCaseJouable(i), plapla, 4);
                     if (score < score2)
                     {
                         j = i;
@@ -34,30 +35,30 @@ namespace Othello
             return 25;
         }
 
-        public int chercherCase(Case n, Plateau plateau, int tour)
+        public int chercherCase(Case n, Plateau plapla, int tour)
         {
             int score;
             if (tour <= 0)
             {
-                plateau.placer(n.X, n.Y);
-                if (plateau.Joueur)
-                    score = plateau.Score[0];
+                plapla.placer(n.X, n.Y);
+                if (plapla.Joueur)
+                    score = plapla.Score[0];
                 else
-                    score = plateau.Score[1];
+                    score = plapla.Score[1];
                 return score;
             }
             else
             {
-                Plateau plapla = plateau.copie();
-                plapla.placer(n.X, n.Y);
-                Player bot = new BotEric(plapla);
+                Plateau plipli = plapla.copie();
+                plipli.placer(n.X, n.Y);
+                Player bot = new BotEric(plipli);
                 bot.Jouer();
+                score = chercherCase(plipli.CaseJouable[0], plipli, tour - 1);
 
-                score = chercherCase(plapla.CaseJouable[0], plateau, tour - 1);
-                for (int i = 1; i < plateau.CaseJouable.Count; i++)
+                for (int i = 1; i < plapla.CaseJouable.Count; i++)
                 {
-                    Plateau plipli = plapla.copie();
-                    int scorePion = chercherCase(plipli.CaseJouable[i],plateau, tour - 1);
+                    plipli = plapla.copie();
+                    int scorePion = chercherCase(plipli.CaseJouable[i],plipli, tour - 1);
                     if (score < scorePion)
                         score = scorePion;
                 }

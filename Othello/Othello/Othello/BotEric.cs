@@ -15,11 +15,14 @@ namespace Othello
         {
             if (plateau.CaseJouable.Count != 0)
             {
-                int retourner = 0;
+                int i = 0;
                 int j = 0;
-                for (int i = 0; i < plateau.CaseJouable.Count; i++)
+                Case n = plateau.getCaseJouable(i);
+                int retourner = plateau.scanRetourner(n.X, n.Y);
+
+                for (i = 1; i < plateau.CaseJouable.Count; i++)
                 {
-                    Case n = plateau.getCaseJouable(i);
+                    n = plateau.getCaseJouable(i);
                     if (retourner < plateau.scanRetourner(n.X, n.Y))
                     {
                         retourner = plateau.scanRetourner(n.X, n.Y);
