@@ -35,7 +35,7 @@ namespace Othello
             plateau = new Plateau();
             etat = 10;
             p1 = new BotEric(plateau);
-            p2 = new BotAsh(plateau);
+            p2 = new BotOliver(plateau);
         }
 
         protected override void Initialize()
@@ -82,7 +82,6 @@ namespace Othello
                         etat = p1.Jouer();
                     else
                     {
-                        System.Threading.Thread.Sleep(500);
                         etat = p2.Jouer();
                     }
                     break;

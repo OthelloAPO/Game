@@ -1,17 +1,6 @@
 # Game
 Jeu d'Othello #APO
 
-les différent retourner :
--> colonne bas :  nop!!!
--> colonne haut : marche
--> ligne droite : marche
--> ligne gauche : marche
--> diag / haut : nop!!
--> diag / bas : marche
--> diag \ haut : nop!!
--> diag \ bas : nop!!
+- On se déplace avec les flèches directionelles, on pose avec espace.
 
-
-Il faut faire une condition pour jouer que si on peu manger
-
-
+faire une IA potable en plus de l'aléatoire.
