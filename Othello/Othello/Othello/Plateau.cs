@@ -100,26 +100,9 @@ namespace Othello
             }
 
             return false; 
-        }
+        }        
 
-        public int jouer(int x, int y)
-        {
-            if (!dansListe(x,y))
-                return 1;
-            else if (joueur)
-                this.damier[x, y] = 1;
-            else
-                this.damier[x, y] = 2;
-
-            retourner(x, y);
-            joueur = !joueur;
-            if (testFin())
-                return 2;
-            else
-                return 0;
-        }
-
-        public bool testFin() //true si fini
+        public bool testComplet() //true si fini
         {
             for (int i = 0; i < _X; i++)
             {
@@ -357,7 +340,13 @@ namespace Othello
                     }
                 }
             }
-            return 1;
+            if (caseJouable.Count != 0)
+                return 20;
+            else
+            {
+                joueur = !joueur;
+                return 25;
+            }
         }
 
         public int scanRetourner(int x, int y)
