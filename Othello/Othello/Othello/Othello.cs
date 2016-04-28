@@ -1,13 +1,5 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Audio;
-using Microsoft.Xna.Framework.Content;
-using Microsoft.Xna.Framework.GamerServices;
 using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
-using Microsoft.Xna.Framework.Media;
 
 namespace Othello
 {
@@ -36,8 +28,8 @@ namespace Othello
 
             plateau = new Plateau();
             etat = 10;
-            p1 = new Human(plateau);
-            p2 = new Human(plateau);
+            p1 = new BotOliver(plateau);
+            p2 = new BotAsh(plateau);
         }
 
         protected override void Initialize()

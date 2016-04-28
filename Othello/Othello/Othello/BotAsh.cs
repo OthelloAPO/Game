@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace Othello
+﻿namespace Othello
 {
     class BotAsh : Player
     {
@@ -32,7 +27,7 @@ namespace Othello
                 }
                 return plateau.placer(plateau.getCaseJouable(j).X, plateau.getCaseJouable(j).Y);
             }
-            return 25;
+            else return 25;
         }
 
         public int chercherCase(Case n, Plateau plapla, int tour)
@@ -73,14 +68,14 @@ namespace Othello
         public int normalEval(Plateau plapla)
         {
             int[,] grilleEval = new int[8, 8]{
-                {5,0,3,3,3,3,0,5},
-                {0,-3,-1,-1,-1,-1,-3,0},
-                {3,-1,1,1,1,1,-1,3},
-                {3,-1,1,1,1,1,-1,3},
-                {3,-1,1,1,1,1,-1,3},
-                {3,-1,1,1,1,1,-1,3},
-                {0,-3,-1,-1,-1,-1,-3,0},
-                {5,0,3,3,3,3,0,5}
+                {900,9,9,9,9,9,9,900},
+                {9,-9,2,2,2,2,-9,9},
+                {9,2,2,0,0,2,2,9},
+                {9,2,0,0,0,0,2,9},
+                {9,2,0,0,0,0,2,9},
+                {9,2,2,0,0,2,2,9},
+                {90,-9,2,2,2,2,-9,9},
+                {900,9,9,9,9,9,9,900},
             };
 
             int score = 0;

@@ -1,7 +1,7 @@
 Content\objets\cadre.xnb
+Content\objets\jetonJoueur1.xnb
 Content\objets\pionblanc.xnb
 Content\objets\pionnoir.xnb
-Content\objets\MyFont.xnb
-Content\objets\jetonJoueur1.xnb
 Content\objets\jetonJoueur2.xnb
 Content\objets\caseJouable.xnb
+Content\objets\MyFont.xnb

@@ -1,5 +1,3 @@
-using System;
-
 namespace Othello
 {
 #if WINDOWS || XBOX
