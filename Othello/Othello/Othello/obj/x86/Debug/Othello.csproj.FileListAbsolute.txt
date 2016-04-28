@@ -25,7 +25,6 @@ D:\04 - Documents\01 - Polytech\Semestre_06\APO 2\Projet APO\Game\Othello\Othell
 D:\04 - Documents\01 - Polytech\Semestre_06\APO 2\Projet APO\Game\Othello\Othello\Othello\bin\x86\Debug\Content\objets\pionblanc.xnb
 D:\04 - Documents\01 - Polytech\Semestre_06\APO 2\Projet APO\Game\Othello\Othello\Othello\bin\x86\Debug\Content\objets\pionnoir.xnb
 D:\04 - Documents\01 - Polytech\Semestre_06\APO 2\ProjetAPO\Game\Othello\Othello\Othello\bin\x86\Debug\Content\objets\cadre.xnb
-D:\04 - Documents\01 - Polytech\Semestre_06\APO 2\ProjetAPO\Game\Othello\Othello\Othello\bin\x86\Debug\Content\objets\jetonJoueur.xnb
 D:\04 - Documents\01 - Polytech\Semestre_06\APO 2\ProjetAPO\Game\Othello\Othello\Othello\bin\x86\Debug\Content\objets\pionblanc.xnb
 D:\04 - Documents\01 - Polytech\Semestre_06\APO 2\ProjetAPO\Game\Othello\Othello\Othello\bin\x86\Debug\Content\objets\pionnoir.xnb
 D:\04 - Documents\01 - Polytech\Semestre_06\APO 2\ProjetAPO\Game\Othello\Othello\Othello\bin\x86\Debug\Othello.exe
@@ -40,3 +39,6 @@ D:\Loick\Documents\Visual Studio 2015\Projects\Game\Othello\Othello\Othello\bin\
 D:\Loick\Documents\Visual Studio 2015\Projects\Game\Othello\Othello\Othello\bin\x86\Debug\Content\objets\pionnoir.xnb
 D:\Loick\Documents\Visual Studio 2015\Projects\Game\Othello\Othello\Othello\bin\x86\Debug\Content\objets\MyFont.xnb
 D:\04 - Documents\01 - Polytech\Semestre_06\APO 2\ProjetAPO\Game\Othello\Othello\Othello\bin\x86\Debug\Content\objets\MyFont.xnb
+D:\04 - Documents\01 - Polytech\Semestre_06\APO 2\ProjetAPO\Game\Othello\Othello\Othello\bin\x86\Debug\Content\objets\jetonJoueur1.xnb
+D:\04 - Documents\01 - Polytech\Semestre_06\APO 2\ProjetAPO\Game\Othello\Othello\Othello\bin\x86\Debug\Content\objets\jetonJoueur2.xnb
+D:\04 - Documents\01 - Polytech\Semestre_06\APO 2\ProjetAPO\Game\Othello\Othello\Othello\bin\x86\Debug\Content\objets\caseJouable.xnb

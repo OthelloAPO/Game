@@ -20,7 +20,9 @@ namespace Othello
         private ObjetOthello cadre;
         private ObjetOthello pionBlanc;
         private ObjetOthello pionNoir;
-        private ObjetOthello jetonJoueur;
+        private ObjetOthello jetonJoueur1;
+        private ObjetOthello jetonJoueur2;
+        private ObjetOthello casejouable;
 
         private Plateau plateau;
         private int etat; //0 Menu de jeu, 10 remplir la liste, 20 il faut jouer , 25 à pas pu jouer, 30 fini les amis;
@@ -34,8 +36,8 @@ namespace Othello
 
             plateau = new Plateau();
             etat = 10;
-            p1 = new BotAsh(plateau);
-            p2 = new BotEric(plateau);
+            p1 = new Human(plateau);
+            p2 = new Human(plateau);
         }
 
         protected override void Initialize()
@@ -56,7 +58,9 @@ namespace Othello
             cadre = new ObjetOthello(Content.Load<Texture2D>("objets\\cadre"), new Vector2(0f, 0f), new Vector2(100f, 100f));
             pionBlanc = new ObjetOthello(Content.Load<Texture2D>("objets\\pionblanc"), new Vector2(0f, 0f), new Vector2(100f, 100f));
             pionNoir = new ObjetOthello(Content.Load<Texture2D>("objets\\pionnoir"), new Vector2(0f, 0f), new Vector2(100f, 100f));
-            jetonJoueur = new ObjetOthello(Content.Load<Texture2D>("objets\\jetonjoueur"), new Vector2(0f, 0f), new Vector2(100f, 100f));
+            jetonJoueur1 = new ObjetOthello(Content.Load<Texture2D>("objets\\jetonjoueur1"), new Vector2(0f, 0f), new Vector2(100f, 100f));
+            jetonJoueur2 = new ObjetOthello(Content.Load<Texture2D>("objets\\jetonjoueur2"), new Vector2(0f, 0f), new Vector2(100f, 100f));
+            casejouable = new ObjetOthello(Content.Load<Texture2D>("objets\\caseJouable"), new Vector2(0f, 0f), new Vector2(100f, 100f));
 
             _font = Content.Load<SpriteFont>("objets\\MyFont");
         }
@@ -141,19 +145,33 @@ namespace Othello
                         xpos = offsetX + x * 57;
                         ypos = offsetY + y * 57;
                         Vector2 pos = new Vector2(xpos, ypos);
-                        if (plateau.getCase(x, y) == 0)
+                        if (plateau.dansListe(x, y))
+                        {
+                            if (p1.GetType() == typeof(Human) && plateau.Joueur)
+                                spriteBatch.Draw(casejouable.Texture, pos, Color.White);
+                            else if (p2.GetType() == typeof(Human) && !plateau.Joueur)
+                                spriteBatch.Draw(casejouable.Texture, pos, Color.White);
+                            else
+                                spriteBatch.Draw(cadre.Texture, pos, Color.White);
+                        }
+                        else if (plateau.getCase(x, y) == 0)
                             spriteBatch.Draw(cadre.Texture, pos, Color.White);
                         else if (plateau.getCase(x, y) == 2)
                             spriteBatch.Draw(pionNoir.Texture, pos, Color.White);
                         else if (plateau.getCase(x, y) == 1)
                             spriteBatch.Draw(pionBlanc.Texture, pos, Color.White);
-                        if (p1.GetType() == typeof(Human))
+                        if (p1.GetType() == typeof(Human) && plateau.Joueur)
                         {
                             Human h = (Human)p1;
                             if (x == h.XJoueur && y == h.YJoueur)
-                                spriteBatch.Draw(jetonJoueur.Texture, pos, Color.White);
+                                spriteBatch.Draw(jetonJoueur1.Texture, pos, Color.White);
                         }
-
+                        if (p2.GetType() == typeof(Human) && !plateau.Joueur)
+                        {
+                            Human h = (Human)p2;
+                            if (x == h.XJoueur && y == h.YJoueur)
+                                spriteBatch.Draw(jetonJoueur2.Texture, pos, Color.White);
+                        }
                     }
                 }
             }

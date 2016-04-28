@@ -18,12 +18,12 @@ namespace Othello
                 int i = 0;
                 int j = 0;
                 Plateau plapla = plateau.copie();
-                int score = chercherCase(plapla.getCaseJouable(i), plapla, 4);
+                int score = chercherCase(plapla.getCaseJouable(i), plapla, 3);
 
                 for (i = 1; i < plateau.CaseJouable.Count; i++)
                 {
                     plapla = plateau.copie();
-                    int score2 = chercherCase(plapla.getCaseJouable(i), plapla, 4);
+                    int score2 = chercherCase(plapla.getCaseJouable(i), plapla, 3);
                     if (score < score2)
                     {
                         j = i;
@@ -41,11 +41,7 @@ namespace Othello
             if (tour <= 0)
             {
                 plapla.placer(n.X, n.Y);
-                if (plapla.Joueur)
-                    score = plapla.Score[0];
-                else
-                    score = plapla.Score[1];
-                return score;
+                return simpleEval(plapla); // choix de l'eval
             }
             else
             {
@@ -53,17 +49,56 @@ namespace Othello
                 plipli.placer(n.X, n.Y);
                 Player bot = new BotEric(plipli);
                 bot.Jouer();
-                score = chercherCase(plipli.CaseJouable[0], plipli, tour - 1);
+                score = chercherCase(plipli.CaseJouable[0], plipli, tour -1 );
 
                 for (int i = 1; i < plapla.CaseJouable.Count; i++)
                 {
                     plipli = plapla.copie();
-                    int scorePion = chercherCase(plipli.CaseJouable[i],plipli, tour - 1);
+                    int scorePion = chercherCase(plipli.CaseJouable[i],plipli, tour -1);
                     if (score < scorePion)
                         score = scorePion;
                 }
                 return score;
             }
-        }        
+        }
+
+        public int simpleEval(Plateau plapla)
+        {
+            if (plapla.Joueur)
+                return plapla.Score[0];
+            else
+                return plapla.Score[1];
+        }
+
+        public int normalEval(Plateau plapla)
+        {
+            int[,] grilleEval = new int[8, 8]{
+                {5,0,3,3,3,3,0,5},
+                {0,-3,-1,-1,-1,-1,-3,0},
+                {3,-1,1,1,1,1,-1,3},
+                {3,-1,1,1,1,1,-1,3},
+                {3,-1,1,1,1,1,-1,3},
+                {3,-1,1,1,1,1,-1,3},
+                {0,-3,-1,-1,-1,-1,-3,0},
+                {5,0,3,3,3,3,0,5}
+            };
+
+            int score = 0;
+            int pion;
+            if (plapla.Joueur)
+                pion = 1;
+            else
+                pion = 2;
+
+            for (int i = 0; i < plateau.X; i++)
+            {
+                for (int j = 0; j < plateau.Y; j++)
+                {
+                    if (plateau.getCase(i,j) == pion)
+                        score += grilleEval[i, j];
+                }
+            }
+            return score;
+        }
     }
 }

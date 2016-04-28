@@ -8,16 +8,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>D:\04 - Documents\01 - Polytech\Semestre_06\APO 2\ProjetAPO\Game\Othello\Othello\Othello\bin\x86\Debug\Content\objets\cadre.xnb</Output>
-      <Time>2016-04-27T17:57:06.295423+02:00</Time>
-    </Item>
-    <Item>
-      <Source>objets\jetonJoueur.png</Source>
-      <Name>objets\jetonJoueur</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>D:\04 - Documents\01 - Polytech\Semestre_06\APO 2\ProjetAPO\Game\Othello\Othello\Othello\bin\x86\Debug\Content\objets\jetonJoueur.xnb</Output>
-      <Time>2016-04-27T17:57:06.2974231+02:00</Time>
+      <Time>2016-04-27T19:12:38+02:00</Time>
     </Item>
     <Item>
       <Source>objets\pionblanc.png</Source>
@@ -26,7 +17,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>D:\04 - Documents\01 - Polytech\Semestre_06\APO 2\ProjetAPO\Game\Othello\Othello\Othello\bin\x86\Debug\Content\objets\pionblanc.xnb</Output>
-      <Time>2016-04-27T17:57:06.3004233+02:00</Time>
+      <Time>2016-04-27T19:12:38+02:00</Time>
     </Item>
     <Item>
       <Source>objets\pionnoir.png</Source>
@@ -35,7 +26,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>D:\04 - Documents\01 - Polytech\Semestre_06\APO 2\ProjetAPO\Game\Othello\Othello\Othello\bin\x86\Debug\Content\objets\pionnoir.xnb</Output>
-      <Time>2016-04-27T17:57:06.3024234+02:00</Time>
+      <Time>2016-04-27T19:12:38+02:00</Time>
     </Item>
     <Item>
       <Source>objets\MyFont.spritefont</Source>
@@ -44,7 +35,34 @@
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
       <Output>D:\04 - Documents\01 - Polytech\Semestre_06\APO 2\ProjetAPO\Game\Othello\Othello\Othello\bin\x86\Debug\Content\objets\MyFont.xnb</Output>
-      <Time>2016-04-27T17:57:06.294423+02:00</Time>
+      <Time>2016-04-28T09:10:46+02:00</Time>
+    </Item>
+    <Item>
+      <Source>objets\jetonJoueur1.png</Source>
+      <Name>objets\jetonJoueur1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\04 - Documents\01 - Polytech\Semestre_06\APO 2\ProjetAPO\Game\Othello\Othello\Othello\bin\x86\Debug\Content\objets\jetonJoueur1.xnb</Output>
+      <Time>2016-04-28T09:07:14+02:00</Time>
+    </Item>
+    <Item>
+      <Source>objets\jetonJoueur2.png</Source>
+      <Name>objets\jetonJoueur2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\04 - Documents\01 - Polytech\Semestre_06\APO 2\ProjetAPO\Game\Othello\Othello\Othello\bin\x86\Debug\Content\objets\jetonJoueur2.xnb</Output>
+      <Time>2016-04-28T08:27:44+02:00</Time>
+    </Item>
+    <Item>
+      <Source>objets\caseJouable.png</Source>
+      <Name>objets\caseJouable</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\04 - Documents\01 - Polytech\Semestre_06\APO 2\ProjetAPO\Game\Othello\Othello\Othello\bin\x86\Debug\Content\objets\caseJouable.xnb</Output>
+      <Time>2016-04-28T08:32:28+02:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
