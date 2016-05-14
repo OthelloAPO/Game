@@ -29,7 +29,7 @@ namespace Othello
             plateau = new Plateau();
             etat = 10;
             p1 = new BotOliver(plateau);
-            p2 = new BotAsh(plateau);
+            p2 = new BotDave(plateau);
         }
 
         protected override void Initialize()

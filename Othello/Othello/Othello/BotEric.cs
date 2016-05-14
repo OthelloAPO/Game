@@ -15,7 +15,7 @@
                 Case n = plateau.getCaseJouable(i);
                 int retourner = plateau.scanRetourner(n.X, n.Y);
 
-                for (i = 1; i < plateau.CaseJouable.Count; i++)
+                for (i = 0; i < plateau.CaseJouable.Count; i++)
                 {
                     n = plateau.getCaseJouable(i);
                     if (retourner < plateau.scanRetourner(n.X, n.Y))

@@ -73,6 +73,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BotAnnie.cs" />
+    <Compile Include="BotDave.cs" />
     <Compile Include="BotEric.cs" />
     <Compile Include="BotOliver.cs" />
     <Compile Include="Case.cs" />

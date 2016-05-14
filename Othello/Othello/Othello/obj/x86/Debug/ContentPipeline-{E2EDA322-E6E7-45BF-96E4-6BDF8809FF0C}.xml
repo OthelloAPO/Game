@@ -8,7 +8,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>D:\Loick\Documents\Visual Studio 2015\Projects\Game\Othello\Othello\Othello\bin\x86\Debug\Content\objets\cadre.xnb</Output>
-      <Time>2016-04-28T09:19:57.7364863+02:00</Time>
+      <Time>2016-05-14T15:49:39.7149491+02:00</Time>
     </Item>
     <Item>
       <Source>objets\jetonJoueur1.png</Source>
@@ -17,7 +17,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>D:\Loick\Documents\Visual Studio 2015\Projects\Game\Othello\Othello\Othello\bin\x86\Debug\Content\objets\jetonJoueur1.xnb</Output>
-      <Time>2016-04-28T09:19:57.7374872+02:00</Time>
+      <Time>2016-05-14T15:49:39.7149491+02:00</Time>
     </Item>
     <Item>
       <Source>objets\pionblanc.png</Source>
@@ -26,7 +26,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>D:\Loick\Documents\Visual Studio 2015\Projects\Game\Othello\Othello\Othello\bin\x86\Debug\Content\objets\pionblanc.xnb</Output>
-      <Time>2016-04-28T09:19:57.7394886+02:00</Time>
+      <Time>2016-05-14T15:49:39.7149491+02:00</Time>
     </Item>
     <Item>
       <Source>objets\pionnoir.png</Source>
@@ -35,7 +35,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>D:\Loick\Documents\Visual Studio 2015\Projects\Game\Othello\Othello\Othello\bin\x86\Debug\Content\objets\pionnoir.xnb</Output>
-      <Time>2016-04-28T09:19:57.7404911+02:00</Time>
+      <Time>2016-05-14T15:49:39.7149491+02:00</Time>
     </Item>
     <Item>
       <Source>objets\jetonJoueur2.png</Source>
@@ -44,7 +44,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>D:\Loick\Documents\Visual Studio 2015\Projects\Game\Othello\Othello\Othello\bin\x86\Debug\Content\objets\jetonJoueur2.xnb</Output>
-      <Time>2016-04-28T09:19:57.7384881+02:00</Time>
+      <Time>2016-05-14T15:49:39.7149491+02:00</Time>
     </Item>
     <Item>
       <Source>objets\caseJouable.png</Source>
@@ -53,7 +53,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>D:\Loick\Documents\Visual Studio 2015\Projects\Game\Othello\Othello\Othello\bin\x86\Debug\Content\objets\caseJouable.xnb</Output>
-      <Time>2016-04-28T09:19:57.7374872+02:00</Time>
+      <Time>2016-05-14T15:49:39.7149491+02:00</Time>
     </Item>
     <Item>
       <Source>objets\MyFont.spritefont</Source>
@@ -62,7 +62,7 @@
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
       <Output>D:\Loick\Documents\Visual Studio 2015\Projects\Game\Othello\Othello\Othello\bin\x86\Debug\Content\objets\MyFont.xnb</Output>
-      <Time>2016-04-28T09:19:57.735485+02:00</Time>
+      <Time>2016-05-14T15:49:39.7149491+02:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
