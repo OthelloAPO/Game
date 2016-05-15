@@ -85,7 +85,31 @@ namespace Othello
 
         public int eval(Plateau plapla)
         {
-            return plapla.Score[1];
+            int[,] grilleEval = new int[8, 8]
+            {
+                { 50,-5, 4, 2, 2, 4,-5, 50},
+                {-5,-10,-1,-1,-1,-1,-10,-5},
+                { 4,-1, 1, 0, 0, 1,-1, 4},
+                { 2,-1, 0, 1, 1, 0,-1, 2},
+                { 2,-1, 0, 1, 1, 0,-1, 2},
+                { 4,-1, 1, 0, 0, 1,-1, 4},
+                {-5,-10,-1,-1,-1,-1,-10,-5},
+                { 50,-5, 4, 2, 2, 3,-5, 50}
+            };
+
+            int score = 0;
+
+            for (int i = 0; i < plapla.X; i++)
+            {
+                for (int j = 0; j < plapla.Y; j++)
+                {
+                    if (plapla.getCase(i, j) == 2)
+                    {
+                        score += 2*grilleEval[i, j];
+                    }
+                }
+            }
+            return score;
         }
     }
 }
