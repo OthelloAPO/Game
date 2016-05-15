@@ -28,7 +28,7 @@ namespace Othello
 
             plateau = new Plateau();
             etat = 10;
-            p1 = new Human(plateau);
+            p1 = new BotOliver(plateau);
             p2 = new BotDave(plateau);
         }
 
@@ -112,12 +112,12 @@ namespace Othello
                 GraphicsDevice.Clear(Color.ForestGreen);
                 spriteBatch.Begin();
                 spriteBatch.DrawString(_font, "Blanc :  " + plateau.Score[0], new Vector2(160, 100), Color.White);
-                spriteBatch.DrawString(_font, "Noire :  " + plateau.Score[1], new Vector2(160, 140), Color.White);
+                spriteBatch.DrawString(_font, "Noir :  " + plateau.Score[1], new Vector2(160, 140), Color.White);
 
                 if (plateau.Score[0] > plateau.Score[1])
                     spriteBatch.DrawString(_font, "Les blancs remportent !", new Vector2(110, 20), Color.White);
                 else if (plateau.Score[0] < plateau.Score[1])
-                    spriteBatch.DrawString(_font, "Les noires remportent !", new Vector2(110, 20), Color.White);
+                    spriteBatch.DrawString(_font, "Les noirs remportent !", new Vector2(110, 20), Color.White);
                 else
                     spriteBatch.DrawString(_font, "Egalite...", new Vector2(160, 20), Color.White);
             }

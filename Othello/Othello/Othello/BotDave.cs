@@ -14,18 +14,18 @@ namespace Othello
             if (plateau.CaseJouable.Count != 0)
             {
                 int k = 0;
-                Plateau plapla = plateau.copie();
                 int score = 0;
-                for (int i = 0; i < plapla.CaseJouable.Count; i++)
+                for (int i = 0; i < plateau.CaseJouable.Count; i++)
                 {
-                    int score2 = Max(plapla, 2);
+                    Plateau plapla = plateau.copie();
+                    plapla.placer(plapla.getCaseJouable(i).X, plapla.getCaseJouable(i).Y);
+                    int score2 = Min(plapla, 4);
                     if (score < score2)
                     {
                         score = score2;
                         k = i;
                     }
                 }
-                Console.WriteLine(eval(plateau));
                 return plateau.placer(plateau.getCaseJouable(k).X, plateau.getCaseJouable(k).Y);
             }
             else return 25;
@@ -48,7 +48,7 @@ namespace Othello
                     
                     score = Max(plipli, tour - 1);
 
-                    if(score > minscore)
+                    if(score < minscore)
                     {
                         minscore = score;
                     }
@@ -74,7 +74,7 @@ namespace Othello
                     
                     score = Min(plipli, tour - 1);
 
-                    if(score < maxscore)
+                    if(score > maxscore)
                     {
                         maxscore = score;
                     }
@@ -85,33 +85,7 @@ namespace Othello
 
         public int eval(Plateau plapla)
         {
-            int[,] grilleEval = new int[8, 8]{
-                {4,-3,2,2,2,2,-3,4},
-                {-3,-4,-1,-1,-1,-1,-4,-3},
-                {2,-1,1,0,0,1,-1,2},
-                {2,-1,0,1,1,0,-1,2},
-                {2,-1,0,1,1,0,-1,2},
-                {2,-1,1,0,0,1,-1,2},
-                {-3,-4,-1,-1,-1,-1,-4,-3},
-                {4,-3,2,2,2,2,-3,4}
-            };
-
-            int score = 0;
-            for (int i = 0; i < plapla.X; i++)
-            {
-                for (int j = 0; j < plapla.Y; j++)
-                {
-                    if (plapla.getCase(i, j) == 2)
-                    {
-                        score += 10 * grilleEval[i, j];
-                    }
-                    else if (plapla.getCase(i, j) == 1)
-                    {
-                        score -= 10 * grilleEval[i, j];
-                    }
-                }
-            }
-            return score;
+            return plapla.Score[1];
         }
     }
 }
