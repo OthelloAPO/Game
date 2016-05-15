@@ -1,4 +1,6 @@
-﻿namespace Othello
+﻿using System;
+
+namespace Othello
 {
     class BotDave : Player
     {
@@ -16,7 +18,7 @@
                 int score = 0;
                 for (int i = 0; i < plapla.CaseJouable.Count; i++)
                 {
-                    int score2 = NegaMax(true, plapla, 3);
+                    int score2 = Max(plapla, 3);
                     if (score < score2)
                     {
                         score = score2;
@@ -28,10 +30,10 @@
             else return 25;
         }
 
-        public int NegaMax(bool turn, Plateau plapla, int tour) // true pour l'IA
+        public int Min(Plateau plapla, int tour)
         {
             int score;
-            int bestscore = 0;
+            int minscore = 1000;
             if (tour <= 0)
             {
                 return eval(plapla);
@@ -42,24 +44,50 @@
                 {
                     Plateau plipli = plapla.copie();
                     plipli.placer(plipli.CaseJouable[i].X, plipli.CaseJouable[i].Y);
-                    score = NegaMax(!turn, plipli, tour - 1);
+                    
+                    score = Max(plipli, tour - 1);
 
-                    if (score >= bestscore && turn)
+                    if(score > minscore)
                     {
-                        bestscore = score;
-                        Case b = plipli.getCaseJouable(i);
-                    }
-                    if (score <= bestscore && !turn)
-                    {
-                        bestscore = score;
-                        Case w = plipli.getCaseJouable(i);
+                        minscore = score;
                     }
                 }
             }
-            return bestscore;
+            return minscore;
         }
-        
+
+        public int Max(Plateau plapla, int tour)
+        {
+            int score;
+            int maxscore = -1000;
+            if (tour <= 0)
+            {
+                return eval(plapla);
+            }
+            else
+            {
+                for (int i = 0; i < plapla.CaseJouable.Count; i++)
+                {
+                    Plateau plipli = plapla.copie();
+                    plipli.placer(plipli.CaseJouable[i].X, plipli.CaseJouable[i].Y);
+                    
+                    score = Min(plipli, tour - 1);
+
+                    if(score < maxscore)
+                    {
+                        maxscore = score;
+                    }
+                }
+            }
+            return maxscore;
+        }
+
         public int eval(Plateau plapla)
+        {
+            return plapla.Score[1];
+        }
+
+        /*public int eval(Plateau plapla)
         {
             int[,] grilleEval = new int[8, 8]{
                 {4,-3,2,2,2,2,-3,4},
@@ -74,10 +102,14 @@
 
             int score = 0;
             int pion;
-            if (plapla.Joueur)
+            if (plateau.Joueur)
+            {
                 pion = 1;
+            }
             else
+            {
                 pion = 2;
+            }
 
             for (int i = 0; i < plapla.X; i++)
             {
@@ -88,6 +120,6 @@
                 }
             }
             return score;
-        }
+        }*/
     }
 }

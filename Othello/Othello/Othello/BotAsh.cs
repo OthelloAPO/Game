@@ -13,12 +13,12 @@
                 int i = 0;
                 int j = 0;
                 Plateau plapla = plateau.copie();
-                int score = chercherCase(plapla.getCaseJouable(i), plapla, 2);
+                int score = chercherCase(plapla.getCaseJouable(i), plapla, 1);
 
                 for (i = 0; i < plateau.CaseJouable.Count; i++)
                 {
                     plapla = plateau.copie();
-                    int score2 = chercherCase(plapla.getCaseJouable(i), plapla, 2);
+                    int score2 = chercherCase(plapla.getCaseJouable(i), plapla, 1);
                     if (score < score2)
                     {
                         j = i;
@@ -85,11 +85,11 @@
             else
                 pion = 2;
 
-            for (int i = 0; i < plateau.X; i++)
+            for (int i = 0; i < plapla.X; i++)
             {
-                for (int j = 0; j < plateau.Y; j++)
+                for (int j = 0; j < plapla.Y; j++)
                 {
-                    if (plateau.getCase(i,j) == pion)
+                    if (plapla.getCase(i,j) == pion)
                         score += 10*grilleEval[i, j];
                 }
             }
