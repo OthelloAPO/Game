@@ -28,7 +28,10 @@ namespace Othello
                 }
                 return plateau.placer(plateau.getCaseJouable(k).X, plateau.getCaseJouable(k).Y);
             }
-            else return 25;
+            else
+            {
+                return 25;
+            }
         }
 
         public int Min(Plateau plapla, int tour)
@@ -96,16 +99,20 @@ namespace Othello
                 {-10,-20, 1,-1,-1, 1,-20,-10},
                 { 100,-10, 4, 2, 2, 4,-10, 100}
             };
-
-            int score = 0;
+            
             int pion;
+            int score;
 
             if (plapla.Joueur)
             {
+
+                score = plapla.Score[1];
                 pion = 2;
             }
             else
             {
+
+                score = plapla.Score[0];
                 pion = 1;
             }
 

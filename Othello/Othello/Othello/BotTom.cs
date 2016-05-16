@@ -17,7 +17,10 @@ namespace Othello
                 Case c = plateau.getCaseJouable(n);
                 return plateau.placer(c.X, c.Y);
             }
-            return 25;
+            else
+            {
+                return 25;
+            }
         }
     }
 }
